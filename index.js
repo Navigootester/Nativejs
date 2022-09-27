@@ -39,10 +39,14 @@ För att kommentera flera rader på MAC tryck opt+Shift+A
 //https://www.dummies.com/article/technology/programming-web-design/javascript/naming-javascript-variables-142522/
 //Variabel är en låda eller behållare för att "lagra" information
 //och att hämta information
+//Man säger att man ska använda const i första hand och let om man verkligen
+//vet att variabeln ska kunna ändras, men detta är ingen regel
 //https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/
-//Let, Går att ändra, Non global scope
-//Var, Går att ändra, Global Scope, kan inhämtas överallt i hela scriptet
-//Const, Bestämma värdet (declare) direkt , Non global scope 
+//Let, Går att ändra, Block Scoped
+//Var, Går att ändra,  Function Scoped, kan inhämtas överallt i hela scriptet
+//Const, Bestämma värdet (declare) direkt ,Block scoped
+//Se mer om scope här:
+//https://medium.com/nerd-for-tech/function-scope-block-scope-in-js-d29c8e7cd216
 //Exempel, let firstName = "Richard";
 //Exempel, let age = 18;
 //Exempel, let car = true;
@@ -61,7 +65,6 @@ console.log(currency + price); */
 
 /* 3. Data Types */
 
-/* Datatyper , Data types*/
 //Number (heltal och decimaltal)
 //Boolean (ger true eller false)
 //String (text)
@@ -124,6 +127,8 @@ URL(`https://tasteline.se${click}`)  */
 //Logiska Operatorer
 //&& and
 //|| or
+//=== Strict operator, båda värden måste överensstämma på vänster och höger sida
+//== Loose qualtiy operator, exempel, "23" == 23 tolkas som true och båda som ett nummer...
 // 1<2  (True, 2 är större än 1)
 // 1 === 2 (false, 1 är inte samma som 2 (värdena matchar ej))
 // 2 === "hej", (false, ett nummer och en sträng, och står ej samma)
@@ -152,8 +157,16 @@ else {
 
 //Conditional Ternary Operator
 // condition ? value1 : value2
+//Exempel 1:
 //let voteable = (age < 17) ? "Too young" : "U can vote"
-
+//Är ett if else statement med endast en rad!
+//Exempel 2 (mer kod men samma sak):
+/*if(age < 17){
+   console.log("Too young")
+}else{
+     console.log("U can vote")
+}
+*/
 
 
 

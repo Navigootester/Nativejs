@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    align-items: center;
+    height:120vh;
+}
+
+.container h1{
+    font-size: 4rem;
+    font-family: sans-serif;
+
+}
