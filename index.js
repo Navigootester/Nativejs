@@ -24,43 +24,135 @@ console.log("hej");
 2. Scriptelementet lägger ni direkt på er html sida (innan body taggen slutar eller inom head elementet längst upp): <script src"länk-till-er-fil"><script> 
 
 3. Kommenterar gör man med //= för en rad eller som i css 
-
+Kommentera ut kod snabbt på PC tryck control och *
+För att kommentera flera rader på MAC tryck opt+Shift+A
 */
+//"Hej", enkelrad
+/* "Hej richard"
+"Hej richard" , dubbelrad*/
 
 
 /* Variabler, Konstanter och datatyper */
 /* 1. Variables, 2. Contants and 3. data types */
 
 /* 1. Variables */
+//https://www.dummies.com/article/technology/programming-web-design/javascript/naming-javascript-variables-142522/
+//Variabel är en låda eller behållare för att "lagra" information
+//och att hämta information
+//https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/
+//Let, Går att ändra, Non global scope
+//Var, Går att ändra, Global Scope, kan inhämtas överallt i hela scriptet
+//Const, Bestämma värdet (declare) direkt , Non global scope 
+//Exempel, let firstName = "Richard";
+//Exempel, let age = 18;
+//Exempel, let car = true;
+//Multiple variables in one go
+/*(använd comma om det är två numbers om ni 
+    ej vill "plussa dom")*/
+/* let currency = 'SEK', price = 299;
+console.log(currency + price); */
 
 
-
-/* 2. Constants */
+/* 2. Constants , you decide one time what the variable is */
+/* const firstName = "Richard" */
+//you have to declare it once
 
 
 
 /* 3. Data Types */
 
+/* Datatyper , Data types*/
+//Number (heltal och decimaltal)
+//Boolean (ger true eller false)
+//String (text)
+//Null (Förväntade sig ett värde exempelvis inmatning av förnamn i ett formulär )
+//Undefined (Förväntar sig en viss typ av information, värde)
+
+//String example
+/* let string = "String";
+let string2 = 'String';
+ */
+//Number example
+/* let number = 10;
+let number2 = 10.01;
+let number3 = -10.01; */
+
+//Boolean example
+//To be used in loops etc, if something is true or false
+//let true1 = true;
+//let false1 = false;
+
+/* Några exempelvärden
+string	'Hej!' och "Hej!"
+number	2, 3.14 och -1
+boolean	true och false
+null	null
+undefined	undefined
+ */
 
 
 /* Operatorer för aritmetik (och strängsammanslagning) */
-/* Operators and String Concats */
+/* Operators and String Concatenation */
 
 /* 1. Operators */
+/* De fyra räknesätten (+, -, * och /) */
+//Med plus kan man även:
+//Lägga ihop strängar typ console.log("Hej" + "då")
+//Öka eller minska
+//++, ökar med 1, istället för att ex. skriva age + 1, age++
+//--, minskar med 1, istället för att ex. skriva age - 1, age--
+//let age = 20;
+//Ändra den önskade variabeln innan ni loggar ut
+//age++
+//console.log(age);
+
+
+/* 2. String Concatenation */
+//Adding strings together
+/* console.log("Hello" + " World!" + " Richard") */
+
+
+//Template Literals (more dynamic)
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+/* console.log(`Hello ${number}`) */
+/* let click;
+URL(`https://tasteline.se${click}`)  */
+//https://tasteline.se/pizza
 
 
 
-/* 2. String Con */
+//Logiska Operatorer
+//&& and
+//|| or
+// 1<2  (True, 2 är större än 1)
+// 1 === 2 (false, 1 är inte samma som 2 (värdena matchar ej))
+// 2 === "hej", (false, ett nummer och en sträng, och står ej samma)
+// 2 => 2 (true, lika med 2 men ej större än 2, den går igenom, dvs true)
 
+//Exempel på and, or
+/* const hasLicense = true;
+const hasNotLicence = false; */
 
+//Nedan ska utvärderas till true eller false
+//&&, och, and
+//Båda stämmer
+//console.log(hasLicense && hasNotLicence);
+//||, eller, or
+//Har antingen eller
+//console.log(hasLicense || hasNotLicence);
 
+//If sats som kollar om man har körtkort eller inte
+/* if(hasLicense && hasNotLicence){
+    console.log("har du eller inte?")
+}
+else {
+    console.log("confirmed")
+}
+ */
 
-/* 3. Data Types */
-
-
-
-
-/* Logic Operators */
+//Conditional Ternary Operator
+// condition ? value1 : value2
+//let voteable = (age < 17) ? "Too young" : "U can vote"
 
 
 
@@ -71,3 +163,4 @@ console.log("hej");
 
 
 /* while, do...while och for */
+
