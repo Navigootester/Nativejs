@@ -44,7 +44,7 @@ För att kommentera flera rader på MAC tryck opt+Shift+A
 //https://www.geeksforgeeks.org/difference-between-var-and-let-in-javascript/
 //Let, Går att ändra, Block Scoped
 //Var, Går att ändra,  Function Scoped, kan inhämtas överallt i hela scriptet
-//Const, Bestämma värdet (declare) direkt ,Block scoped
+//Const, Bestämma värdet (declare) direkt ,Block scoped 
 //Se mer om scope här:
 //https://medium.com/nerd-for-tech/function-scope-block-scope-in-js-d29c8e7cd216
 //Exempel, let firstName = "Richard";
@@ -54,7 +54,7 @@ För att kommentera flera rader på MAC tryck opt+Shift+A
 /*(använd comma om det är två numbers om ni 
     ej vill "plussa dom")*/
 /* let currency = 'SEK', price = 299;
-console.log(currency + price); */
+console.log(currency  price); */
 
 
 /* 2. Constants , you decide one time what the variable is */
@@ -92,6 +92,8 @@ boolean	true och false
 null	null
 undefined	undefined
  */
+//isnan is not a number
+//Number.isNaN(123);
 
 
 /* Operatorer för aritmetik (och strängsammanslagning) */
@@ -127,6 +129,8 @@ URL(`https://tasteline.se${click}`)  */
 //Logiska Operatorer
 //&& and
 //|| or
+// ==
+// if(23 == "23") GÖR EJ SÅHÄR
 //=== Strict operator, båda värden måste överensstämma på vänster och höger sida
 //== Loose qualtiy operator, exempel, "23" == 23 tolkas som true och båda som ett nummer...
 // 1<2  (True, 2 är större än 1)
@@ -171,9 +175,279 @@ else {
 
 
 /* if och else, samt switch */
+/* Conditional Statements
+Very often when you write code, you want to perform different actions for different decisions.
 
+You can use conditional statements in your code to do this.
 
+In JavaScript we have the following conditional statements:
+
+Use if to specify a block of code to be executed, if a specified condition is true
+Use else to specify a block of code to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative blocks of code to be executed */
+
+/* if statement/*
+/* Syntax for if statement */
+/*
+if (condition) {
+  block of code to be executed if the condition is true
+}else{
+    block of code to be executed if the condition is false
+}
+*/
+/* Example */
+/*
+const hour = new Date().getHours(); 
+let greeting;
+
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+
+*/
+
+/* else if statement syntax */
+
+/* 
+if (condition1) {
+  block of code to be executed if condition1 is true
+} else if (condition2) {
+  block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  block of code to be executed if the condition1 is false and condition2 is false
+}
+*/
+
+/* Example */
+/* 
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+*/
+
+/*Javascript Switch statement*/
+
+/* Syntax for switch */
+
+/* switch(expression) {
+  case x:
+    code block
+    break;
+  case y:
+    code block
+    break;
+  default:
+    code block
+} */
+/* Example */
+/* let day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+} */
 
 
 /* while, do...while och for */
+/* Different Kinds of Loops
+JavaScript supports different kinds of loops:
+
+for - loops through a block of code a number of times
+for/in - loops through the properties of an object
+for/of - loops through the values of an iterable object
+while - loops through a block of code while a specified condition is true
+do/while - also loops through a block of code while a specified condition is true */
+
+/* Javascript FOR loop */
+/* The FOR loop */
+/* Syntax */
+/* 
+for (expression 1; expression 2; expression 3) {
+  code block to be executed
+}
+*/
+/* Example */
+/* 
+let text = "";
+
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i + "<br>";
+}
+
+PS. Assignment operator += means x=x+y,
+and in this case: text + "The number is " + i + "<br>";
+*/
+/* Expression */
+/*
+Expression 1
+Normally you will use expression 1 to initialize the variable used in the loop (let i = 0).
+This is not always the case. JavaScript doesn't care. Expression 1 is optional.
+You can initiate many values in expression 1 (separated by comma):
+*/
+/* Example */
+/*
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i, len, text;
+for (i = 0, len = cars.length, text = ""; i < len; i++) {
+  text += cars[i] + "<br>";
+}
+
+Expression 2
+Often expression 2 is used to evaluate the condition of the initial variable.
+This is not always the case. JavaScript doesn't care. Expression 2 is also optional.
+If expression 2 returns true, the loop will start over again. If it returns false, the loop will end.
+
+PS.
+If you omit expression 2, you must provide a break inside the loop. Otherwise the loop will never end. This will crash your browser. 
+*/
+
+/* 
+Expression 3
+Often expression 3 increments the value of the initial variable.
+This is not always the case. JavaScript doesn't care. Expression 3 is optional.
+Expression 3 can do anything like negative increment (i--), positive increment (i = i + 15), or anything else.
+Expression 3 can also be omitted (like when you increment your values inside the loop):
+*/
+/* Example */
+/*
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+
+let i = 0;
+let len = cars.length;
+let text = "";
+
+for (; i < len; ) {
+  text += cars[i] + "<br>";
+  i++;
+}
+*/
+
+/* The while loop 
+The while loop loops through a block of code as long as a specified condition is true.
+*/
+/* Syntax */
+/* while (condition) {
+  code block to be executed
+} */
+/* Example */
+
+/* let i = 0;
+
+while (i < 10) {
+  i++;
+  console.log(i)
+}; */
+
+/* Do While loop */
+/* The do while loop is a variant of the while loop. 
+This loop will execute the code block once, before checking if the condition is true, 
+then it will repeat the loop as long as the condition is true.
+ */
+/* Syntax */
+/*/*
+do {
+    code block to be executed
+  }
+  while (condition); */
+/* Example */
+/*
+
+let i = 0;
+
+do {
+ console.log(i)
+  i++;
+}
+while (i < 10); 
+*/
+
+//If statements
+
+/* let hour = prompt("Vad är klockan");
+ if(hour < 13){
+  console.log("En härlig dag!")
+ }else{
+  console.log("Matkoma")
+ } */
+
+ // While loop
+ /* let i = 2;
+ let names = ["richard", "axel", "berit"];
+
+ while (i < names.length){
+   console.log(names[i])
+   i++
+  
+ }; */
+
+ //While do loop
+ /* let i = 0;
+
+ do{
+
+  console.log(i)
+  i++;
+ }while(i < 10); */
+
+/* for(let i = 10; i >= 0; i--){
+  console.log(i)
+}; */
+
+let day = "";
+
+switch(new Date().getDay()){
+  case 1:
+  day = "Monday";
+  console.log(day)
+  break;
+  case 2:
+  day = "Tuesday";
+  console.log(day)
+  break;
+  case 3:
+  day = "Wednesday";
+  console.log(day)
+  break;
+  case 4:
+  day = "Thursday";
+  console.log(day)
+  break;
+  case 5:
+  day = "Friday";
+  console.log(day)
+  break;
+  default:
+  console.log("Nu är det helg!")
+  break;
+};
+
+
+
+
 
