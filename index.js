@@ -423,6 +423,254 @@ let day = 3;
 
  */
 
+/* let a = [34, 46, 48]
+a.push(3); 
+console.log(a)
+console.log(a.length)
+a.pop()
+console.log(a) */
+
+
+
+
+//En vanlig array
+
+/* let a = [1, 2, 3, 400, 5] */
+//Manipulera array genom att gå direkt på variabeln
+/* a = [100, 105, 34.5, 1] */
+//Loopar ut hela arrayen
+/* console.log(a) */
+//Loopar ut ett värde ur en array
+/* console.log(a[2]) */
+
+//Loopar igenom min array med for loop metoden
+/* for (let zero = 0; zero < a.length; zero++){
+  console.log(a[zero])
+}
+ */
+//Loopar igenom min array med while loop metoden
+/* let zero = 0;
+
+while(zero < a.length){
+  console.log(a[zero])
+  zero++
+} */
+
+/* let a = [1, 2, 3, 400, 5] */
+//Lägga till ett värde i slutet av en array med (push)
+/* a.push(200)
+console.log(a) */
+
+//Ta bort det sista värdet i min befintliga array med (pop)
+/* a.pop()
+console.log(a) */
+
+
+
+
+// Göteborg Jacket kostar 599
+/* console.log(`${product.name} kostar ${product.price} `) */
+
+//OBJEKT
+//Skapar ett objekt med en produkt som innehåller flera nycklar och värden
+
+
+/* let product = {
+  candy:'chokladkaka',
+  price: 250
+}
+//Ändrar priset i objektet
+product.price = 290
+
+//Ändrar typ av produkt(candy) till kanelbulle
+product.candy = 'kanelbulle'
+
+//Loggar ut information från objektet
+console.log(product)
+ */
+/* let p = 'price';
+let product = {
+  candy:'chokladkaka',
+  price: 250
+}
+//Ändrar priset i objektet
+product[p] = 329
+
+//Ändrar typ av produkt(candy) till kanelbulle
+product.candy = 'kanelbulle'
+
+//Loggar ut information från objektet
+console.log(product) */
+
+/* let cars = {
+  audi: {model:525, price:199000, condition:'bad'}
+}
+
+for (let n = 0; n < cars.audi.length; n++) {
+  console.log(cars.audi)
+} */
+
+/* let cars = {
+
+  audi:[{model:525, price: 199, condition:'Bad'},
+        {model:526, price: 499, condition:'Bad'}],
+
+  bmw: {model:325, price:299 , condition: 'Good'}
+
+}
+
+for (let n =0; n < cars.audi.length;n++){
+
+}
+
+console.log(cars.audi) */
+
+//tom array
+/* let = [] */
+
+//Array innehållande värden
+/* let a = ['Richard', 42, true] */
+
+//Ändra ett värde i en array
+/* let a = ['Richard', 42, true]
+a[1] = 43
+console.log(a) */
+
+//Lägga till ett värde
+/* let a = ['Richard', 42, true]
+a.push(2)
+console.log(a) */
+
+//Ta bort ett värde
+/* let a = ['Richard', 42, true, 2]
+a.pop()
+console.log(a) */
+
+//Plocka ut värden ur en array (slice)
+/* let a = [1, 2, 3, 4]
+console.log(a.slice(1,3)) */
+
+//Plocka ut första värdet ur en array
+/* let a = [1, 2, 3, 4]
+let firstElement = a.shift()
+
+console.log(a) */
+
+//Lägg in ett till värde i början av en array
+/* let a = [2, 3, 4]
+a.unshift(1)
+console.log(a) */
+
+//Loopa igenom en array
+/* let a = [1, 2, 3, 4]
+
+for(let i = 0; i < a.length; i++ ){
+  console.log(a[i])
+} */
+
+/* let x
+
+while (x === '' || isNaN(x) || x === null) {
+  x = prompt()
+}
+
+for (let n = Number(x); n > 0; n--) {
+  alert()
+} */
+
+/* let name = prompt('Vad heter du?')
+
+if (name !== null && name !== '') {
+  alert('Hej...')
+  alert(name)
+}  */
+
+//Hur kollar vi om ett nummer angetts
+
+
+/* 
+let number = 0
+
+while (number < 0) {
+   
+  console.log(number)
+  number++
+} */
+
+/* for(let number = 0; number <= 3; number++){
+    console.log(number)
+} */
+
+/* let numbers = [1, 2, 3, 4]
+
+let n = 0
+
+while (n <= numbers.length) {
+  console.log(numbers[n])
+  n++
+} */
+
+/* let numbers = [1, 2, 3, 4]
+
+for(let n = 0; n < numbers.length; n++){
+    console.log(numbers[n])
+} */
+
+/* var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+   
+console.log(arr.splice(2, 7)) */
+
+/* let p = 'price';
+
+let product1 = {
+    type: 'Jeans',
+    brand: 'Lee',
+    price: 499
+}
+
+product1[p] = 399
+
+
+console.log("Dessa " + product1.type + " kostar " + product1.price )
+console.log(`Dessa ${product1.type} kostar ${product1.price}`)
+ */
+
+//Object in an object (nested)
+/* let cars = {
+    audi: {model:'a4', price:199000, condition:'bad'},
+    audi2: {model:'a6', price:399000, condition:'bad'},
+    bmw: {model:'520', price:399000, condition:'good'},
+    bmw2: {model:'525', price:399000, condition:'good'}
+
+  }
+
+for(let i=0;i < cars.length; i++){
+    cars.audi.condition
+} */
+
+//Function in an object
+
+/* const store2 = (name, color) => {
+    const type2 ={
+        name:name,
+        color: color,
+        price: 100,
+        qty:2,
+        total: function() {
+            return this.price * this.qty;
+        }
+    }
+    const info = `You have recieved ${type2.name} with the color of ${type2.color}
+    total price of ${type2.total()}`//total is a method therefore you need () after total
+
+    return info
+    
+}
+
+console.log(store2('Lee', 'blue')) */
+
+
+
 
 
 
