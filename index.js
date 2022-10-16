@@ -671,6 +671,97 @@ console.log(store2('Lee', 'blue')) */
 
 
 
+//Using Json and objects
+/* 
+let user = `[
+  {
+      "firstName" : "Richard",
+      "age" : 42,
+      "company" : "It-Högskolan",
+      "Egenskaper" : ["Javascript", "React"]
+
+  },
+  {
+      "firstName" : "Bertil",
+      "age" : 23,
+      "company" : "Volvo"
+
+  }
+]`
+console.log(JSON.parse(user)[1].age)
+
+ */
+//Fetch
+//Lite termer
+
+/* Cors */
+/* Cross-Origin Resource Sharing (CORS) är en HTTP-header-baserad mekanism som gör att en server 
+kan indikera alla ursprung (domän, schema eller port) förutom sitt eget från vilket en webbläsare 
+ska tillåta laddning av resurser. CORS förlitar sig också på en mekanism genom vilken webbläsare gör en 
+"preflight"-begäran till servern som är värd för korsursprungsresursen, för att kontrollera att servern tillåter 
+den faktiska begäran. I den preflighten skickar webbläsaren rubriker som indikerar 
+HTTP-metoden och rubriker som kommer att användas i den faktiska begäran.
+ */
+
+/* Body */
+/* En body är data som skickas av klienten till ditt API. 
+En body request är den data som ditt API skickar till klienten. 
+Ditt API måste nästan alltid skicka en svarstext. 
+Men klienter behöver inte nödvändigtvis skicka begäranden hela tiden. */
+
+/* Promise */
+/* En promise är en proxy för ett värde som inte nödvändigtvis är känt när det (promise) skapas. 
+Det låter dig associera hanterare med en asynkron handlings eventuella framgångsvärde eller misslyckande. 
+Detta låter asynkrona metoder returnera värden som synkrona metoder: istället för att omedelbart 
+returnera det slutliga värdet, returnerar den asynkrona metoden ett löfte om att 
+leverera värdet någon gång i framtiden.
+
+En promise finns i ett av dessa tillstånd:
+
+väntande: initialt tillstånd, varken uppfyllt eller avvisat.
+uppfyllt: vilket betyder att operationen slutfördes framgångsrikt.
+avvisad: vilket betyder att operationen misslyckades. */
 
 
+/* GET */
+//Fetch exempel för att få reda på api:ets respons
+/* fetch('https://avancera.app/cities/')
+.then(res => console.log(res)) */
 
+//Fetch exempel för att få reda på api:ets data
+/* fetch('https://avancera.app/cities/')
+ *//* .then(res => res.json()) //Ger ytterligare en promise därför kör vi en .then till nedanför för att hämta data
+.then(data => console.log(data)) */
+
+//Fetch exempel för att få reda på api:ets data och en utvald data som ej (id) finns (ger en 404)
+/* fetch('https://avancera.app/cities/0')
+.then(res => res.json()) 
+.then(data => console.log(data)) */
+
+//Fetch exempel för att få reda på api:ets data och en utvald data som finns (id)
+/* fetch('https://avancera.app/cities/5347da70-fef3-4e8f-ba49-e8010edba878')
+.then(res => res.json()) 
+.then(data => console.log(data)) */
+
+//Post Data
+//För att köra post så måste vi använda oss av "option" "http" metoden i vår fetch
+/* fetch('https://avancera.app/cities/', {
+  method: 'POST',
+  //Skickar med en header 
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  //Därefter så skickar vi in data i vår förfrågan och på insidan av "bodyn" i form av json
+  //Måste använda stringify för att skicka det i sträng
+  body: JSON.stringify({
+    "name": "Ankeborgs",
+    "population": 12
+
+  })
+})
+.then(res => {
+  return res.json()
+})
+.then(data => console.log(data))
+
+ */

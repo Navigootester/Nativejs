@@ -1,0 +1,15 @@
+[
+    {
+        "firstName" : "Richard",
+        "age" : 42,
+        "company" : "It-Högskolan",
+        "Egenskaper" : ["Javascript", "React"]
+
+    },
+    {
+        "firstName" : "Bertil",
+        "age" : 23,
+        "company" : "Volvo"
+
+    }
+]
