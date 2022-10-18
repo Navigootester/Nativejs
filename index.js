@@ -730,7 +730,7 @@ avvisad: vilket betyder att operationen misslyckades. */
 
 //Fetch exempel för att få reda på api:ets data
 /* fetch('https://avancera.app/cities/')
- *//* .then(res => res.json()) //Ger ytterligare en promise därför kör vi en .then till nedanför för att hämta data
+ .then(res => res.json()) //Ger ytterligare en promise därför kör vi en .then till nedanför för att hämta data
 .then(data => console.log(data)) */
 
 //Fetch exempel för att få reda på api:ets data och en utvald data som ej (id) finns (ger en 404)
@@ -765,3 +765,211 @@ avvisad: vilket betyder att operationen misslyckades. */
 .then(data => console.log(data))
 
  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Get
+//Exempel där ni ser hur ett anrops respons ser ut
+/* fetch('https://avancera.app/cities')
+.then(res => console.log(res)) */
+
+//Se datan på servern
+/* fetch('https://avancera.app/cities')
+.then(res => res.json())
+.then(data => console.log(data)) */
+
+//Anropar exempelvis ett id som ej finns
+/* fetch('https://avancera.app/cities/0')
+.then(res => res.json())
+.then(data => console.log(data)) */
+
+//Anropar exempelvis ett id som ej finns
+/* fetch('https://avancera.app/cities/5347da70-fef3-4e8f-ba49-e8010edba878')
+.then(res => res.json())
+.then(data => console.log(data)) */
+
+//Post data med fetch
+/* fetch('https://avancera.app/cities/', {
+//Anger metod som ska göras  
+method: 'POST',
+  //Skickar med en header
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  //Ange vilken data som ska in i bodyn
+  body: JSON.stringify({
+    "name": "Ankeborg-stad",
+    "population": 12
+  })
+})
+//Skapar en promise att responsen är korrekt och att det är i ett json format
+.then(res => {
+  //Skapar en retur i fetch funktionen
+  return res.json()
+})
+.then(data => console.log(data)) */
+
+
+//Repetition av funktioner
+//Function Declaration
+//Semikolon ej nödvändigt
+
+/* //En parameter och ett argument
+function hello (firstName){
+  console.log("hej " + firstName);
+}//Avslutingen avslutas ej med semikolon för detta är inget uttryck (expression)
+//Argumentet skrivs in i funktionsanropets parentes
+hello("Richard");
+
+//Två parameter och två argument
+function hello2 (firstName, lastName){
+  console.log("Hej " + firstName + ' ' + lastName)
+}
+//Argumenten skrivs in i funktionsanropets parentes
+//Om man bara anger ett argument när det förväntas två blir den sista
+//undefined precis som en variabel som ej deklarerats med dett värde
+hello2("Richard", "Carlsson");
+
+//Function expression där man lagrar funktionen inuti en variabel
+//Kan ej nås överallt, fördelen är att man får mer ordning
+//Semikolon ska användas
+
+const speak = function(){
+  console.log('hejsan')
+}
+
+speak();
+
+
+//Lägger till 1 variabel i parametern samt ger den ett argument
+//när vi "invokar/ropar" på den
+
+const speak2 = function(firstName){
+  //för effektivitetens skull så gör jag backticks och gör en
+  //template literal
+  console.log(`hejsan ${firstName}`)
+}
+
+speak2('Richard');
+//console log kommer EJ fungera då den ligger utanför variabeln med
+//funktionen i
+//console.log(firstName)
+
+//Lägger till 2 variablar i parametern samt ger den 2 argument
+//när vi "invokar/ropar" på den
+
+const speak3 = function(firstName, lastName){
+  //för effektivitetens skull så gör jag backticks och gör en
+  //template literal
+  console.log(`hejsan ${firstName} ${lastName}`)
+}
+
+speak3('Richard', 'Carlsson')
+ */
+
+/* const speak4 = function(firstName = "Richard", lastName = "Carlsson"){
+  //för effektivitetens skull så gör jag backticks och gör en
+  //template literal
+  console.log(`hejsan ${firstName} ${lastName}`)
+}
+
+speak4('Richard', 'Carlsson')
+
+ */
+
+//Return (Vi ska inte console.log på allt utan vi vill få ut ett värde som vi sedan kan använda)
+/* const calcArea = function(radius){
+  //Sparas just nu endast i funktionen
+  let area = 3.14 * radius**2;
+  //console.log(area)//Såhär vill vi inte göra för då kan vi ju inte använda den (lagras ej i minnet)
+  return area;
+};
+
+calcArea(5) */
+// Kan ej console.log(area) för den är sparad inuti funktionsblocket
+
+//lagra värdet i en variabel sen logga ut det
+/* let area = calcArea(5);
+console.log(area);
+ */
+
+
+//Återanvänder värdet från första funktionen
+/* 
+const areaMessage = function(area){
+ return "Arean är " + area
+};
+
+areaMessage(area);
+let message =  areaMessage(area);
+console.log(message)
+
+ */
+
+/* let user = `[
+  {
+      "firstName" : "Richard",
+      "age" : 18,
+      "company" : "It-Högskolan",
+      "Egenskaper" : ["Javascript", "React"]
+
+  },
+  {
+      "firstName" : "Bertil",
+      "age" : 23,
+      "company" : "Volvo"
+
+  }
+]`
+
+console.log(user) */
+
+
+
+
+//Fetch
+//Exempel på hur en respons från en server 
+//ser ut i en GET förfrågan
+/* fetch('https://avancera.app/cities')
+.then(res => console.log(res)) */
+
+//Få ut datan med hjälp av fetch och GET
+/* fetch('https://avancera.app/cities')
+//Skapar ett löfte om att servern svarar tillbaka och 
+//berättar sen att responsen ska vara i json format
+.then(res => res.json())
+//skapar ett löfte till om att nu vill vi hämta ut
+//datan 
+.then(data => console.log(data))
+ */
+
+//Nu ska vi inhämta information från ett enskilt
+//objekt (men på fel sätt)
+/* 
+fetch('https://avancera.app/cities/5347da70-fef3-4e8f-ba49-e8010edba878')
+.then(res => res.json())
+.then(data => console.log(data))
+ */
+
+//Post Data
+fetch('https://avancera.app/cities/', {
+  body: JSON.stringify({ "name": "Teststad4", "population": 123 }),
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  method: 'POST'
+})
+  .then(response => response.json())
+  .then(result => {
+    console.log(result)
+  }) 

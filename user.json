@@ -1,7 +1,7 @@
 [
     {
         "firstName" : "Richard",
-        "age" : 42,
+        "age" : 18,
         "company" : "It-Högskolan",
         "Egenskaper" : ["Javascript", "React"]
 
