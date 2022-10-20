@@ -431,8 +431,6 @@ a.pop()
 console.log(a) */
 
 
-
-
 //En vanlig array
 
 /* let a = [1, 2, 3, 400, 5] */
@@ -743,40 +741,6 @@ avvisad: vilket betyder att operationen misslyckades. */
 .then(res => res.json()) 
 .then(data => console.log(data)) */
 
-//Post Data
-//För att köra post så måste vi använda oss av "option" "http" metoden i vår fetch
-/* fetch('https://avancera.app/cities/', {
-  method: 'POST',
-  //Skickar med en header 
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  //Därefter så skickar vi in data i vår förfrågan och på insidan av "bodyn" i form av json
-  //Måste använda stringify för att skicka det i sträng
-  body: JSON.stringify({
-    "name": "Ankeborgs",
-    "population": 12
-
-  })
-})
-.then(res => {
-  return res.json()
-})
-.then(data => console.log(data))
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Get
 //Exempel där ni ser hur ett anrops respons ser ut
@@ -820,122 +784,6 @@ method: 'POST',
 .then(data => console.log(data)) */
 
 
-//Repetition av funktioner
-//Function Declaration
-//Semikolon ej nödvändigt
-
-/* //En parameter och ett argument
-function hello (firstName){
-  console.log("hej " + firstName);
-}//Avslutingen avslutas ej med semikolon för detta är inget uttryck (expression)
-//Argumentet skrivs in i funktionsanropets parentes
-hello("Richard");
-
-//Två parameter och två argument
-function hello2 (firstName, lastName){
-  console.log("Hej " + firstName + ' ' + lastName)
-}
-//Argumenten skrivs in i funktionsanropets parentes
-//Om man bara anger ett argument när det förväntas två blir den sista
-//undefined precis som en variabel som ej deklarerats med dett värde
-hello2("Richard", "Carlsson");
-
-//Function expression där man lagrar funktionen inuti en variabel
-//Kan ej nås överallt, fördelen är att man får mer ordning
-//Semikolon ska användas
-
-const speak = function(){
-  console.log('hejsan')
-}
-
-speak();
-
-
-//Lägger till 1 variabel i parametern samt ger den ett argument
-//när vi "invokar/ropar" på den
-
-const speak2 = function(firstName){
-  //för effektivitetens skull så gör jag backticks och gör en
-  //template literal
-  console.log(`hejsan ${firstName}`)
-}
-
-speak2('Richard');
-//console log kommer EJ fungera då den ligger utanför variabeln med
-//funktionen i
-//console.log(firstName)
-
-//Lägger till 2 variablar i parametern samt ger den 2 argument
-//när vi "invokar/ropar" på den
-
-const speak3 = function(firstName, lastName){
-  //för effektivitetens skull så gör jag backticks och gör en
-  //template literal
-  console.log(`hejsan ${firstName} ${lastName}`)
-}
-
-speak3('Richard', 'Carlsson')
- */
-
-/* const speak4 = function(firstName = "Richard", lastName = "Carlsson"){
-  //för effektivitetens skull så gör jag backticks och gör en
-  //template literal
-  console.log(`hejsan ${firstName} ${lastName}`)
-}
-
-speak4('Richard', 'Carlsson')
-
- */
-
-//Return (Vi ska inte console.log på allt utan vi vill få ut ett värde som vi sedan kan använda)
-/* const calcArea = function(radius){
-  //Sparas just nu endast i funktionen
-  let area = 3.14 * radius**2;
-  //console.log(area)//Såhär vill vi inte göra för då kan vi ju inte använda den (lagras ej i minnet)
-  return area;
-};
-
-calcArea(5) */
-// Kan ej console.log(area) för den är sparad inuti funktionsblocket
-
-//lagra värdet i en variabel sen logga ut det
-/* let area = calcArea(5);
-console.log(area);
- */
-
-
-//Återanvänder värdet från första funktionen
-/* 
-const areaMessage = function(area){
- return "Arean är " + area
-};
-
-areaMessage(area);
-let message =  areaMessage(area);
-console.log(message)
-
- */
-
-/* let user = `[
-  {
-      "firstName" : "Richard",
-      "age" : 18,
-      "company" : "It-Högskolan",
-      "Egenskaper" : ["Javascript", "React"]
-
-  },
-  {
-      "firstName" : "Bertil",
-      "age" : 23,
-      "company" : "Volvo"
-
-  }
-]`
-
-console.log(user) */
-
-
-
 
 //Fetch
 //Exempel på hur en respons från en server 
@@ -962,8 +810,8 @@ fetch('https://avancera.app/cities/5347da70-fef3-4e8f-ba49-e8010edba878')
  */
 
 //Post Data
-fetch('https://avancera.app/cities/', {
-  body: JSON.stringify({ "name": "Teststad4", "population": 123 }),
+/* fetch('https://avancera.app/cities/', {
+  body: JSON.stringify({ "name": "Axels-stad", "population": 123 }),
   headers: {
     'Content-Type': 'application/json'
   },
@@ -972,4 +820,403 @@ fetch('https://avancera.app/cities/', {
   .then(response => response.json())
   .then(result => {
     console.log(result)
-  }) 
+  })  */
+
+
+  //Repetition av funktioner
+  //Funktionsdeklaration - function declaration
+  //Semikolon är ej nödvändigt på slutet
+
+  //Det enda nedan gör är att logga ut ett meddelande
+/*   function hello (){
+   /*  console.log("Hej på er") */
+  
+
+  //Invoke, man ropar på funktionen
+ /*  hello() */
+
+
+ //Function expression 
+ //där vi lagrar hela funktionen inuti en variabel
+//Semikolon användas
+
+/* const speak = function(){
+  console.log('hej')
+}
+
+speak(); */
+
+//Lägger till 1 variabel i parametern i min function expression-funktions-uttryck
+/* const speak2 = function(name){
+ console.log(`Hejsan alla ${name}`)
+};
+
+speak2('Fullstackutvecklare') */
+
+//Lägger till 2 variabler i parametern i min function expression-funktions-uttryck
+/* const speak3 = function(name, name2){
+  console.log(`Hejsan alla ${name} och ${name2}`)
+ };
+ 
+ speak3('Fullstackutvecklare', 'Javascriptutvecklare')
+  */
+
+ //Samma som ovan men för att undvika undefined så förutbestämmer vi ett värde
+ /* const speak4 = function(name3 = "Javautvecklare", name4 = "Pytonutvecklare"){
+   return (`Hejsan alla ${name3} och ${name4}`);
+ } */
+ 
+
+ //speak4("Frontendutvecklare", "Javascriptutvecklare")
+
+ //För att få ut ett värde ur en funktion skapas en variabel
+/*  let b =  speak4("Frontendutvecklare", "Javascriptutvecklare")
+ console.log(b) */
+
+ //Return
+ //Function expression som räknar ut radius av ett tal
+ /* const calcArea = function(radius){
+  return 3.14 * radius**2; 
+ } */
+
+ //För att inhämta värdet(returen) använder vi nedan en variabel som
+ //både kallar på funktionen och ger den ett argument
+ //let area = calcArea(5);
+
+
+ //en funktion till som använder returvärdet från annan funktion
+
+/*  const areaMessage = function (area){
+    return "Arean är " + area;
+ }
+
+ let message = areaMessage(area)
+ console.log(message)
+
+ //Arrow funktion version 1
+ const calcArea2 = () => 
+   3.14 * radius**2; 
+
+ //Arrow funktion version 2, om vi returnerar direkt behövs ej curly braces eller namnet return
+ const calcArea3 = () => 
+   3.14 * radius**2; 
+  */
+ 
+
+
+   /* DOM och noder */
+   //Skapat av webläsaren
+   //Kallas 'document' object
+   //I konsollen skriv document.(se vilka metoder som kan användas, testa document.URL osv)
+   //Hierarki med noder, ser ut som ett träd och det längst ut (löven) är noderna
+
+   //Skapa variabel och hämta något i dokumentet
+   //Queryselector, bästa sättet, välj ut selector
+   //väljer första elementet, går uppifrån och ned
+
+
+/*    const para = document.querySelector('p');
+   console.log(para); */
+
+   //Komma åt en annan p tagg
+   //väljer den med klass, sätt . eller # om det är id
+
+  /*  const para = document.querySelector('.error');
+   console.log(para);
+ */
+   //Komma åt den andra error klassen, vill komma åt divens error class (finns bara en)
+
+   /* const para = document.querySelector('div.error');
+   console.log(para); */
+
+   //Osäker på selector, högerklicka i konsollen visa vilken och använd
+   // ">" är child selector
+   
+  /*  const para = document.querySelector('body > div:nth-child(2) > p:nth-child(1)');
+   console.log(para); */
+
+  //Göra något med alla p taggar?
+
+  /* const paras = document.querySelectorAll('p'); */
+  //Visar en Nodelist (kan man köra en for loop eller en foreach)
+  //Liknar en array men det är det egentligen inte men liknande användning
+  /* console.log(paras)  */
+
+  //Komma åt det första i listan?
+ /*  console.log(paras[0])  */
+
+ //Göra en foreach?, kallas group nodes
+/*  paras.forEach(para =>{
+     console.log(para)
+ }) */
+
+ //Leta upp alla error klasser?
+ /* const errors = document.querySelectorAll('.error');
+ console.log(errors) */
+
+ //Get element by id
+ /* const title = document.getElementById('title')
+ console.log(title) */
+
+ //Get element by class, ger en HTMLkollektion vilket ej kan jämföras
+ //med en nodelist och kan därför ej loopas igenom eller köra foreach
+ /* const title = document.getElementsByClassName('title2')
+ console.log(title) 
+//få ut värdet går dock
+console.log(title[0])  */
+
+//Get elements by their tag name
+/* const paras = document.getElementsByTagName('p');
+ *///ger också en HTML kollection
+/* console.log(paras)
+ */
+
+//Därför är det mest användbart att använda querySelector
+
+
+//Manipulera noder
+
+//const para = document.querySelector('p');
+
+//Property that gives us the property
+//console.log(para.innerText)
+
+//Ändra texten
+//para.innerText = 'hej på er'
+//Använda metoden "append"(+), lägger till
+//para.innerText += 'hej på er'
+
+//Ändra alla p taggar
+/* const paras = document.querySelectorAll('p');
+//Ger oss en Nodelist och då kan vi göra en foreach och en callback function
+paras.forEach(para => {
+console.log(para.innerText);
+//Uppdatera allt
+para.innerText = 'Hej';
+});
+ */
+
+//Ändra HTML i ett element
+//const content = document.querySelector('.content');
+//Visar innehållet i div
+//console.log(content.innerHTML);
+
+//Byta ut innehållet
+//content.innerHTML = '<h2>Nu har vi bytt ut innehållet</h2>';
+
+//Byta ut innehållet och appenda
+//content.innerHTML += '<h2>Nu har vi bytt ut innehållet</h2>';
+
+//Får en lista från en databas med en array av personer som vi sen vill byta ut
+//Bra exempel på hur det kan användas
+/* const people = ['Richard', 'Fanny', 'Hassan'];
+
+people.forEach(person => {
+  content.innerHTML += `<p>${person}</p>`;
+});
+ */
+
+//Jobba med attribut
+
+//const link = document.querySelector('a');
+//Get attribute
+//console.log(link.getAttribute('href'));
+//Change an attribute with setAttribute
+/* link.setAttribute('href', 'https://www.iths.se');
+console.log(link.getAttribute('href'));
+ */
+//Ändra länknamnet
+//link.innerText = 'Bästa skolan';
+
+
+
+
+/* Document Object Model "DOM" */
+
+//Det är webläsaren som har skapat detta och det kallas för document
+//Testa i konsollen och skriv document så finner ni hela webbläsarens 
+//html innehåll
+//DOM innehåller en hierarki av noder
+//Richard tipsar att använda querySelector (åtkomst till det första elementet)
+//För att komma åt innehållet så ska en variabel skapas
+
+/* const para = document.querySelector('p');
+console.log(para);
+ */
+
+//Komma åt en annan p tagg som kanske har en class eller ett id
+//
+/* const para = document.querySelector('.error');
+console.log(para); */
+//Ett id
+/* const para = document.querySelector('#title');
+console.log(para); */
+
+//Komma åt elementnod samt innehållsnod
+//> Kallas för child selector
+/* const para = document.querySelector('body > div:nth-child(4) > p.error');
+console.log(para); */
+
+//Se alla p taggar
+//const paras = document.querySelectorAll('p');
+//Få ut info om hur många paragrafer som finns, en så kallad nodelist
+//https://developer.mozilla.org/en-US/docs/Web/API/NodeList
+/* console.log(paras); */
+
+//Få ut en av flera paragrafer ur "Nodelisten"
+//console.log(paras[0]); 
+
+//Om vi vill få ut en (loop) av alla pargrafer (går endast om det är en NodeList)
+//ForEach tekniken (group nodes)
+//Völjer att få ut det enskilt (singular=para)
+//Skulle kunna använda vilket namn som helst
+//Call-back funktion 
+//https://www.simplilearn.com/tutorials/javascript-tutorial/callback-function-in-javascript
+/* paras.forEach(para => {
+  console.log(para);
+}) */
+
+//getElementByID
+//Här är det ej nödvändigt att använda # för att komma åt elementet
+/* const title = document.getElementById('title');
+console.log(title); */
+
+//Tid 11:01
+//getElementsByClassName
+//Här är det ej nödvändigt att använda . för att komma åt elementet
+//Det som kommer ut av detta är en HTMLCollection, denna kan vi ej köra en foreach på
+//https://developer.mozilla.org/en-US/docs/Web/API/HTMLCollection
+/* const errorMessage = document.getElementsByClassName('error');
+console.log(errorMessage[1]);
+ */
+
+//Få tag i element via taggar
+//Tid 2:26
+//<p> en tagg
+//Behöver ej ange annat taggens namn
+/* const paras = document.getElementsByTagName('p');
+console.log(paras); */
+
+/* Manipulation av DOM */
+//Tid 2:29
+//const para = document.querySelector('p');
+//console.log(para.innerText);
+
+//Ändra innehållet
+//Tid 2:31
+//para.innerText = 'Hej på er, inget är angivet i tid :)';
+
+//Append, lägga till
+//Tid 2:32
+//https://developer.mozilla.org/en-US/docs/Web/API/Element/append
+//(+)är append, lägger till och  (=)är tilldela
+
+/* para.innerText += " Javisst, nu är det tillagt";
+console.log(para); */
+
+//Ändra alla p taggar i HTML dokumentet
+//Tid 2:38
+//const paras = document.querySelectorAll('p');
+
+//Genomför en Foreach för att få ut all P information
+/* paras.forEach(para => {
+  console.log(para);
+  //Ändrar alla P element
+  para.innerText += ' hej';
+}); */
+
+//Ändra HTML i ett element till ett element
+//Tid 2:42
+//Exempel <p> till <h2>
+//const content = document.querySelector('.content');
+//console.log(content.innerHTML);
+/* content.innerHTML = '<h1></h1>'; */
+
+
+
+//Få ut en array med namn från exemelvis en databas
+/* const people = ['Eddie', 'Fanny', 'Johan']; */
+//Tid 2:48
+//Få ut varje person från arrayen i DOM
+//Är mycket vanligt att man inhämtar information från en array och ska 
+//få ut detta i DOM
+/* people.forEach(person => {
+  content.innerHTML += `<p>${person}</p>`;
+}); */
+
+//Tips från Eddie: clg + tab = console.log
+
+//Avsnitt Attribut
+//Tid 04:16
+
+//getAttribute, inhämtar ett attribut exempelvis "href" i en länk
+//const link = document.querySelector('a');
+
+//Vart länkas man till just nu?
+//console.log(link.getAttribute('href'));
+
+//Ändra ett attribut då använder vi något som kallas setAttribute
+//setAttribute('Vilket attribut' , 'vad vi vill ändra till')
+//Skulle lika gärna kunna fungera med ett annat attribut som tex "src"
+//och ändra bildlänk
+/* link.setAttribute('href', 'https://www.iths.se');
+console.log(link); */
+
+//Ändra texten i innehållet, använd innerText
+/* link.innerText = 'Bästa skolan'; */
+
+//ClassList
+//Tid 4:26
+//Ändra och se ett elements klasser
+
+/* const element = document.querySelector('#some-element');
+console.log(element.classList) */
+//Då visas alla klasser som finns i elementet, DOMtokenList
+//https://developer.mozilla.org/en-US/docs/Web/API/DOMTokenList
+
+//Manipulera en klass
+//Remove, tar bort klass
+//element.classList.remove('btn-primary');
+//Add, lägger till en klass
+//element.classList.add('btn-success');
+
+//Frågeställning om en klass innehåller ett visst värde (namn)
+//contains
+//Kollar med boolean om nedan knapp är ett visst värde, ger true eller false
+//Kan användas i sammanhang om man vill köra en jämförelse för att sedan utföra en viss
+//aktivitet
+//console.log(element.classList.contains('btn-success'));
+
+//Styling
+//Tid 04:39
+//I vårt exempel har vi ett element med ett id som heter message
+//const element = document.querySelector('#message');
+/* console.log(element.style);
+console.log(element.style.color); */
+
+//Ändra styling
+/* element.style.color = 'crimson';
+element.style.backgroundColor = '#000';
+element.style.marginLeft = '50px';
+
+const bg = document.querySelector('body');
+bg.style.backgroundColor = '#000'; */
+
+//ComputedStyle
+//tid 05:01
+//Computedstyle hjälper oss att se ett elements aktiva egenskaper
+/* console.log(getComputedStyle(element).color);
+console.log(getComputedStyle(element).height); */
+
+
+
+
+
+
+
+
+
+
+
+
+

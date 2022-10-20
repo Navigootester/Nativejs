@@ -2,7 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+   
 }
+
 
 .container{
     display: flex;
@@ -12,7 +14,7 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
     color: white;
     align-items: center;
-    height:120vh;
+    height:10vh;
 }
 
 .container h1{
