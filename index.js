@@ -1208,15 +1208,82 @@ bg.style.backgroundColor = '#000'; */
 /* console.log(getComputedStyle(element).color);
 console.log(getComputedStyle(element).height); */
 
+/* addEventlistener */
+//Lyssnar på event
+//Skapar variabler för nå de tre färglagda "lådorna" grandparent, parent och child klasserna
+/* const grandparent = document.querySelector('.grandparent');
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child'); */
+
+//Väljer att lägga till 2 parametrar i en addeventlistener (man kan ha flera)
+//Lägger även till en event callback function för att se i loggen info om den markerade ytan
+
+/* grandparent.addEventListener('click', e => {
+  console.log(e)
+}) */
+
+//Väljer Target för det är den mest användbara i listan och för att komma åt elementet vid klick
+/* grandparent.addEventListener('click', e => {
+  console.log(e.target)
+}) */
+//Kan även få 2st att fungera samtidigt
+/* grandparent.addEventListener('click', e => {
+  console.log(e.target)
+})
+ */
+
+//Använda function ihop med en eventlistener
+
+//Först väljer vi att skapa en listener för ex grandparent
+//I parametern väljer att skriva eventet först sen kommatecken och vad den ska göra 
+//grandparent.addEventListener('click', bg);
+
+//skapar funktionen som ska aktiveras och göra något, i vårt fall byta färg
+/* function bg () {
+  grandparent.style.backgroundColor = 'pink';
+} */
+
+//Lägga till en eventlistener utan elementobjekt
+//addEventListener('click', onKeyDown)
+//Exempelfunktion 
+/* function onKeyDown() {
+  console.log('En tangent har tryckts ner.')
+}
+
+addEventListener('keydown', onKeyDown) */
+
+//Visar i konsollen vilka events som finns under konsoll, källor och brytpunkter
+//Visar W3schools event lista:
+//https://www.w3schools.com/jsref/dom_obj_event.asp
 
 
+/* Komma åt formulärvärden */
+
+//const input = document.querySelector('input').value;
+//Visar värdet som finns med value
+//console.log(input);
 
 
+//Känner av hur värdet ändrats med en funktion
+/* document.querySelector('input').addEventListener('input', () => {
+  console.log('Värdet har ändrats')
+})
+ */
 
+//Och vad värdet har ändrats till med target.value
+/* document.querySelector('input').addEventListener('input', event => {
+  console.log('Värdet har ändrats till', event.target.value)
+}) */
 
+//Kollar värdet i en checkbox är tru eller false
+/* document.querySelector('input[type="checkbox"]').addEventListener('input', event => {
+  console.log('Värdet har ändrats till', event.target.checked)
+}) */
 
+//Kollar värdet i radio buttons (Richards modernare tips med en foreach istället för en for loop)
+//Radio buttons måste loopas igenom
+/* const radios = document.querySelectorAll('input[type=radio][name="nationality"]');
+    radios.forEach(radio => radio.addEventListener('change', () => alert(radio.value)));
 
-
-
-
+ */
 
