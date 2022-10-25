@@ -1,3 +1,4 @@
+
 /*Välkommen till Native Javascript Kursen 2022!
 I denna fil kommer all JS kod att publiceras allt efterssom vi går igenom varje 
 sektion på lektionerna.
@@ -721,11 +722,14 @@ uppfyllt: vilket betyder att operationen slutfördes framgångsrikt.
 avvisad: vilket betyder att operationen misslyckades. */
 
 
-/* GET */
+/* GET */ 
+//Tid för inspelning 43:29 den 24 okt, Richard nämner
+//att nedan kan användas för att testa så "responsen" fungerar på det
+//önskade API man valt
 //Fetch exempel för att få reda på api:ets respons
 /* fetch('https://avancera.app/cities/')
-.then(res => console.log(res)) */
-
+.then(res => console.log(res)) //Promise, ett löfte om att fråga och få ett svar tillbaka
+ */
 //Fetch exempel för att få reda på api:ets data
 /* fetch('https://avancera.app/cities/')
  .then(res => res.json()) //Ger ytterligare en promise därför kör vi en .then till nedanför för att hämta data
@@ -789,7 +793,7 @@ method: 'POST',
 //Exempel på hur en respons från en server 
 //ser ut i en GET förfrågan
 /* fetch('https://avancera.app/cities')
-.then(res => console.log(res)) */
+.then(res => console.log(res))  */
 
 //Få ut datan med hjälp av fetch och GET
 /* fetch('https://avancera.app/cities')
@@ -955,29 +959,29 @@ speak2('Fullstackutvecklare') */
  console.log(errors) */
 
  //Get element by id
- /* const title = document.getElementById('title')
- console.log(title) */
+/*  const title = document.getElementById('title')
+ console.log(title)  */
 
  //Get element by class, ger en HTMLkollektion vilket ej kan jämföras
  //med en nodelist och kan därför ej loopas igenom eller köra foreach
- /* const title = document.getElementsByClassName('title2')
- console.log(title) 
+/*  const title = document.getElementsByClassName('title2')
+ console.log(title)  */
 //få ut värdet går dock
-console.log(title[0])  */
+/* console.log(title[0])  */ 
 
 //Get elements by their tag name
 /* const paras = document.getElementsByTagName('p');
- *///ger också en HTML kollection
-/* console.log(paras)
- */
+///ger också en HTML kollection
+console.log(paras)
+  */
 
 //Därför är det mest användbart att använda querySelector
 
 
 //Manipulera noder
-
-//const para = document.querySelector('p');
-
+/* 
+const para = document.querySelectorAll('p');
+console.log(para) */
 //Property that gives us the property
 //console.log(para.innerText)
 
@@ -987,14 +991,14 @@ console.log(title[0])  */
 //para.innerText += 'hej på er'
 
 //Ändra alla p taggar
-/* const paras = document.querySelectorAll('p');
+/* const paras = document.querySelectorAll('p'); */
 //Ger oss en Nodelist och då kan vi göra en foreach och en callback function
-paras.forEach(para => {
+/* paras.forEach(para => {
 console.log(para.innerText);
 //Uppdatera allt
 para.innerText = 'Hej';
-});
- */
+ }); */
+
 
 //Ändra HTML i ett element
 //const content = document.querySelector('.content');
@@ -1286,4 +1290,180 @@ addEventListener('keydown', onKeyDown) */
     radios.forEach(radio => radio.addEventListener('change', () => alert(radio.value)));
 
  */
+
+    //Nedan ger en logg på vart man befinner sig på X och Y axeln i webbläsaren
+    //Tid 02:48 24 okt
+  /*   function onMouseMove(event) {
+      console.log(event.clientX, event.clientY) // Koordinat
+    }
+    
+    document
+      .querySelector('#heading')
+      .addEventListener('mousemove', onMouseMove) */
+
+
+    /* Events */
+    //Tid 04:08
+    //Skapar 3st variabler som inhämtar 3 olika "divar" i min HTML
+    //Som vi nu ska arbeta med
+   /*  const grandparent = document.querySelector('.grandparent');
+    const parent = document.querySelector('.parent');
+    const child = document.querySelector('.child');
+ */
+    //Skapar en lyssnare som lyssnar efter klick och därefter
+    //visar upp "eventet"
+   /*  grandparent.addEventListener('click', e => {
+      console.log(e)
+    });
+ */
+
+//"Target" väljer ut exakt det elementet vi ska arbeta med
+     /*  grandparent.addEventListener('click', e => {
+      console.log(e.target)
+    });
+ */
+
+//Byter ut bakgrundsfärgen vid "click" med hjälp av en function
+//Tid 04:16
+//Icke global lyssnar pga att vi i nedan exempel har
+//valt ut diven "grandparent"
+//en funktion som sätts igång vid klickning
+/* function bg (){
+  grandparent.style.backgroundColor = 'pink';
+} */
+
+//Skapar en lyssnare som inhämtar en function vid klick
+//grandparent.addEventListener('mouseover', bg);
+
+//Global lyssnare som ej tar hänsyn till något särskilt
+//element
+//Tid 04:26
+
+/* function action () {
+  document.body.style.backgroundColor = 'pink';
+  prompt("Hej vilken färg vill du ha som bakgrund")
+} */
+
+/* addEventListener('click', action); */
+
+/* function keyDown () {
+  console.log("en tangent har tryckts ned")
+}
+
+addEventListener('keydown', keyDown);
+ */
+
+/* Åtkomst till webbformulär */
+//Tid 04:57
+/* const input = document.querySelector('input').value;
+console.log(input); */
+
+//Känner av hur värdet ändras
+/* document.querySelector('input').addEventListener('input', () => {
+  console.log("Värdet har ändrats")
+}) */
+
+//Visa vilket värde det har ändrats till
+/* document.querySelector('input').addEventListener('input', event => {
+  console.log("värdet har ändrats till ", event.target.value);
+});
+ */
+
+//Kollar om checkboxen är ifylld, bekräftar i form av ett boolean värde, true or false
+/* document.querySelector('input[type="checkbox"]').addEventListener('input', event =>{
+  console.log("Boxen har ifyllts ", event.target.checked);
+}); */
+
+//Radio Buttons
+//Kan vara användbar i ovan......
+//Använder forEach för att se vilka av de befintliga radio knapparna som är ifyllda
+ //const radios = document.querySelectorAll('input[type="radio"][name="nationality"]');
+ //Gör en foreach för att se alla värden
+ //radios.forEach(radio => radio.addEventListener('change', () => alert(radio.value)));
+
+
+//FEU 22 Genomgång av "Lyssnare"
+
+//Tid 04:33
+//Demo av ett tangenttryck, ändrar bakgrund i DOM
+/* function onKeyDown() {
+  let bg = document.querySelector('body');
+  bg.style.backgroundColor = "black";
+}
+addEventListener('keydown', onKeyDown) */
+
+
+//X och Y koordinater
+/* function onMouseMove(event) {
+  console.log(event.clientX, event.clientY) // Koordinat
+}
+
+document
+  .querySelector('#heading')
+  .addEventListener('mousemove', onMouseMove) */
+
+//Tid 04:56
+//Demo av "lyssnare"
+//Skapar variabler som är förberedda för manipulation
+/* const grandparent = document.querySelector('.grandparent');
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child');
+ */
+//Se info om eventet
+//Tips: Gå in på konsollen>källor>brytpunkter för händelselyssnare
+//Se even flera eventtyper här:
+//https://www.w3schools.com/jsref/dom_obj_event.asp
+//https://stackoverflow.com/questions/35936365/what-exactly-is-the-parameter-e-event-and-why-pass-it-to-javascript-functions
+//Läs mer om "e" här: http://api.jquery.com/category/events/event-object/
+
+/* grandparent.addEventListener('click', e =>{
+  console.log(e)
+} ) */
+
+//Ändrar färg på "grandparent" när jag rör musen över
+/* function bg (){
+  grandparent.style.backgroundColor = 'pink';
+} */
+//Ändrar färg på "grandparent" när jag rör musen ur den 
+
+/* grandparent.addEventListener('mouseover', bg);
+
+function bg2 (){
+  grandparent.style.backgroundColor = 'black';
+}
+
+grandparent.addEventListener('mouseout', bg2);
+
+ */
+
+//Global lyssnare
+//Tid 05:15
+/* addEventListener('keydown', onKeyDown);
+
+function onKeyDown (){
+  console.log("Alla är nu väldigt taggade men trötta")
+} */
+
+//Ser om en input har ändrats i konsollen
+/* document.querySelector('input')
+.addEventListener('input', () => {
+  console.log('Värdet har ändrats')
+}) */
+
+//Få ut värdet från inputen
+//använder vi event.target.value
+/* document.querySelector('input')
+    .addEventListener('input', event => {
+      console.log('Värdet har ändrats till', event.target.value)
+    });
+ */
+
+//Man kan loopa igenom radio buttons (modernare tips att ta med sig)
+/* const radios = document.querySelectorAll('input[type="radio"][name="nationality"]');
+radios.forEach(radio => radio.addEventListener('change', () => alert(radio.value)));
+
+
+ */
+
+
 

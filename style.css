@@ -32,6 +32,7 @@
 .container-eventdemo{
     display: flex;
     justify-content: center;
+    margin-top: 20vh;
 }
 
 .container-formdemo{
@@ -66,4 +67,9 @@
     width: 100px;
     background-color: #ff00b7;
 
+}
+#input-demo{
+
+margin-top:10vh;
+margin-bottom:10vh;
 }
