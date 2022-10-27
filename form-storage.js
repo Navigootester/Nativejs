@@ -75,36 +75,19 @@ const button = document.querySelector('#btn');
 
 
 //Fetch data
+const results = document.getElementById('result');
+
 fetch(`http://universities.hipolabs.com/search?country=Sweden`)
-.then(response => response.json())
-.then(data => {
-    console.log(data)
-    let content = '';
+  .then(response => response.json())
+  .then((data) => {
+    data.forEach(uni => {
+      results.innerHTML += `
+  <div class="result">
+    <h3>${uni.name}</h3>
+  </div>
+    `
+    })
 
-   
-    //Taking the data and mapping the information
-    data.map(p => {
-
-  
-
-    //Proceeding to "paint my HTML Dom"
-      content += `
-     
-       
-   
-                 <div><p>${p.name}</p></div>    
-                
-     
-      `
-     
-
-
-    });
+  });
     
 
-    document.querySelector("#university").innerHTML = content;
-    
-
-}).catch (error => {
-    console.log(error)
-})
