@@ -249,6 +249,8 @@ if (time < 10) {
   default:
     code block
 } */
+
+
 /* Example */
 /* let day;
 switch (new Date().getDay()) {
@@ -1464,6 +1466,23 @@ radios.forEach(radio => radio.addEventListener('change', () => alert(radio.value
 
 
  */
+
+/* Webstorage */
+/* localStorage, sessionStorage */
+
+//localStorage
+/* 
+Låter oss spara data så att dessa finns kvar när användaren besöker vår sajt nästa gång 
+(så länge användaren inte rensar sitt “browser cache”)
+Bra vid avbrott vid uppkoppling
+Endast strängar kan sparas
+sessionStorage-värden är “per flik”, medan localStorage är “permanenta”
+setItem/getItem används för att sätta/hämta värden, där varje värde är 
+associerat med en nyckel
+JSON.stringify och JSON.parse är användbara för att spara mer komplicerade värden
+*/
+//https://mdn.github.io/dom-examples/web-storage/
+
 
 
 
