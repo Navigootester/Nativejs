@@ -1,9 +1,9 @@
 //Inhämtar inputs
-const firstName = document.querySelector('#firstname');
+/* const firstName = document.querySelector('#firstname');
 const lastName = document.querySelector('#lastname');
 const age = document.querySelector('#age');
 const button = document.querySelector('#btn');
-
+ */
 //Skapar en function vid knapptryck
 //button.addEventListener('click', function(){
     //alert() Testar att knappen funkar
@@ -29,6 +29,7 @@ const button = document.querySelector('#btn');
 //button.addEventListener('click', function(){
     //alert() Testar att knappen funkar
 
+
     //Skapar en sparningsfunktion med localstorage
     //obs firstname osv kan heta vadsomhelst men det är så vi tilldelar en "nyckel"
     //till lagringen
@@ -53,21 +54,57 @@ const button = document.querySelector('#btn');
 //console.log(sessionStorage.getItem('Work'));
 
 //Hantera objekt med storage
-let obj = {firstname:'Richard', age:18 }; 
+//let obj = {firstname:'Richard', age:18 }; 
 //Efterssom session och localstorage jobbar med strängar så använder vi här
 //parse och stringify som ni nu lärt er
 
 //Set item av objektet
-sessionStorage.setItem('person', JSON.stringify(obj)); 
+//sessionStorage.setItem('person', JSON.stringify(obj)); 
 //Se objektet som sträng
-let objView = sessionStorage.getItem('person');
+//let objView = sessionStorage.getItem('person');
 /* console.log(objView); */
 
 //Konvertera det till ett js objekt med parse
-let objViewObj = JSON.parse(sessionStorage.getItem('person'));
+//let objViewObj = JSON.parse(sessionStorage.getItem('person'));
 /* console.log(objViewObj);  */
 
-for (let i = 0;sessionStorage.length; i++){
-    const key = sessionStorage.key(i);
-    console.log(`${key} => ${sessionStorage.getItem(key)}`);
-}
+
+
+
+
+
+
+//Fetch data
+fetch(`http://universities.hipolabs.com/search?country=Sweden`)
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+    let content = '';
+
+   
+    //Taking the data and mapping the information
+    data.map(p => {
+
+  
+
+    //Proceeding to "paint my HTML Dom"
+      content += `
+     
+       
+   
+                 <div><p>${p.name}</p></div>    
+                
+     
+      `
+     
+
+
+    });
+    
+
+    document.querySelector("#university").innerHTML = content;
+    
+
+}).catch (error => {
+    console.log(error)
+})
