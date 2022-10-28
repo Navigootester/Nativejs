@@ -75,7 +75,7 @@ const button = document.querySelector('#btn');
 
 
 //Fetch data
-const results = document.getElementById('result');
+/* const results = document.getElementById('result');
 
 fetch(`http://universities.hipolabs.com/search?country=Sweden`)
   .then(response => response.json())
@@ -89,5 +89,84 @@ fetch(`http://universities.hipolabs.com/search?country=Sweden`)
     })
 
   });
-    
+     */
 
+
+
+
+ 
+  /* 
+  let results = document.querySelector('#result');
+
+  fetch('http://universities.hipolabs.com/search?country=Sweden')
+  .then(response => response.json())
+  .then((data) => {
+    data.forEach(uni => {
+        results.innerHTML += `
+        <div class="result">
+        <h3>${uni.name}</h3>
+        </div>
+        `
+    })
+  }); */
+
+
+
+
+  /* Webstorage */
+  //Lagrar information i webbläsaren, lite som en databas
+  //Inhämta mina inputs
+/*   const firstName = document.querySelector('#firstname');
+  const lastName = document.querySelector('#lastname');
+  const age = document.querySelector('#age');
+  const button = document.querySelector('#btn');
+ */
+/*   button.addEventListener('click', function(){
+    
+    //När man trycke rpå knappen så sparas infon i localstorage
+    localStorage.firstName = firstName.value;
+    localStorage.lastName = lastName.value;
+    localStorage.age = age.value;
+  });
+
+  //Använd ej document write vid riktigt arbete utan endast för testning, samma sak som med prompt och alert
+  document.write(
+    localStorage.firstName,
+    localStorage.lastName,
+    localStorage.age
+  );
+ */
+  //Sessionstorage
+/*   button.addEventListener('click', function(){
+    
+    //När man trycke rpå knappen så sparas infon i localstorage
+    sessionStorage.firstName = firstName.value;
+    sessionStorage.lastName = lastName.value;
+    sessionStorage.age = age.value;
+  });
+
+  //Använd ej document write vid riktigt arbete utan endast för testning, samma sak som med prompt och alert
+  document.write(
+    sessionStorage.firstName,
+    sessionStorage.lastName,
+    sessionStorage.age
+  ); */
+
+  //SetItem
+  //Vi lagrar ett värde i ett objekt
+  /* sessionStorage.setItem('Work', 'Educator');
+  console.log(sessionStorage.getItem('Work'));
+ */
+
+  //Hantera större objekt inkl numbers
+/*   let obj = {firstname: 'Tim', age:18};
+  //Nu måste vi arbeta med Parse och Stringify för att kunna delvis lagra ovan objekt i webbläsaren samt hämta
+  sessionStorage.setItem('users', JSON.stringify(obj));
+
+  let objView = sessionStorage.getItem('Person');
+/*   console.log(objView); */
+
+/*   let objViewObj = JSON.parse(sessionStorage.getItem('Person'));
+  console.log(objViewObj)
+ */
+// */
